@@ -41,7 +41,7 @@ jobs:
         run: rm foundry.toml
 
       - name: Run Slither
-        uses: crytic/slither-action@v0.2.0
+        uses: crytic/slither-action@v0.4.0
         id: slither
         with:
           target: "src/SparkRsr.sol"
