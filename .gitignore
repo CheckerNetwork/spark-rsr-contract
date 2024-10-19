@@ -1,5 +1,8 @@
 cache
 
+out
+!out/src
+
 ## Local secrets file
 /secrets/**/**
 
