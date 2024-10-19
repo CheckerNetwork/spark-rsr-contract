@@ -6,11 +6,14 @@
 
 ## Getters
 
-### `.commitments(uint) -> string`
+### `.commitments(uint offset) -> string`
 
 ## Methods
 
-### `.addCommitment(string)`
+### `new SparkRsr(address writer)
+### `.addCommitment(address string)`
+
+May only be called by `writer`.
 
 ## Development
 
