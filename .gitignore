@@ -1,7 +1,7 @@
 cache
 
-out
-!out/src
+out/**/**
+!out/src/SparkRsr.sol/SparkRsr.json
 
 ## Local secrets file
 /secrets/**/**
