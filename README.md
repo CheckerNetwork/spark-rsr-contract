@@ -6,7 +6,7 @@
 
 ## Getters
 
-### `.commitments(uint offset) -> string`
+### `.acceptedRetrievalTaskMeasurementsCommitments(uint offset) -> string`
 
 ## Methods
 

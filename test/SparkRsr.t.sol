@@ -7,15 +7,15 @@ import "../src/SparkRsr.sol";
 contract SparkRsrTest is Test {
     function test_AddCommitment() public {
         SparkRsr sparkRsr = new SparkRsr(address(this));
-        sparkRsr.addCommitment("cid");
-        assertEq(sparkRsr.commitments(0), "cid");
+        sparkRsr.addAcceptedRetrievalTaskMeasurementsCommitment("cid");
+        assertEq(sparkRsr.acceptedRetrievalTaskMeasurementsCommitments(0), "cid");
         vm.expectRevert();
-        sparkRsr.commitments(1);
+        sparkRsr.acceptedRetrievalTaskMeasurementsCommitments(1);
     }
 
     function test_AddCommitmentAuth() public {
         SparkRsr sparkRsr = new SparkRsr(vm.addr(1));
         vm.expectRevert();
-        sparkRsr.addCommitment("cid");
+        sparkRsr.addAcceptedRetrievalTaskMeasurementsCommitment("cid");
     }
 }
