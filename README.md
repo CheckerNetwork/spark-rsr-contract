@@ -6,12 +6,12 @@
 
 ## Getters
 
-### `.acceptedRetrievalTaskMeasurementsCommitments(uint offset) -> string`
+### `.providerRetrievalResultStatsCommitments(uint offset) -> string`
 
 ## Methods
 
 ### `new SparkRsr(address writer)
-### `.addCommitment(address string)`
+### `.addProviderRetrievalResultStatsCommitment(address string)`
 
 May only be called by `writer`.
 
