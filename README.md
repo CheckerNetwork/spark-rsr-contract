@@ -4,6 +4,8 @@
 
 [Abi](out/src/SparkRsr.sol/SparkRsr.json)
 
+[Interface spec](https://www.notion.so/protocollabs/Design-Spark-SLI-on-chain-interface-121837df73d4801aaaa4f13ff7839cd0?d=126837df73d4803a95c1001caac0aa71#b70f9a9b99dd43739b136393d08c2091)
+
 ## Getters
 
 ### `.providerRetrievalResultStatsCommitments(uint offset) -> string`
