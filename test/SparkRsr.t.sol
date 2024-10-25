@@ -5,17 +5,17 @@ import "forge-std/Test.sol";
 import "../src/SparkRsr.sol";
 
 contract SparkRsrTest is Test {
-    function test_AddProviderRetrievalResultStatsCommitment() public {
+    function test_AddProviderRetrievalResultStats() public {
         SparkRsr sparkRsr = new SparkRsr(address(this));
-        sparkRsr.addProviderRetrievalResultStatsCommitment("cid");
-        assertEq(sparkRsr.providerRetrievalResultStatsCommitments(0), "cid");
+        sparkRsr.addProviderRetrievalResultStats("cid");
+        assertEq(sparkRsr.providerRetrievalResultStats(0), "cid");
         vm.expectRevert();
-        sparkRsr.providerRetrievalResultStatsCommitments(1);
+        sparkRsr.providerRetrievalResultStats(1);
     }
 
-    function test_AddProviderRetrievalResultStatsCommitmentAuth() public {
+    function test_AddProviderRetrievalResultStatsAuth() public {
         SparkRsr sparkRsr = new SparkRsr(vm.addr(1));
         vm.expectRevert();
-        sparkRsr.addProviderRetrievalResultStatsCommitment("cid");
+        sparkRsr.addProviderRetrievalResultStats("cid");
     }
 }

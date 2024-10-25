@@ -8,12 +8,12 @@
 
 ## Getters
 
-### `.providerRetrievalResultStatsCommitments(uint offset) -> string`
+### `.providerRetrievalResultStats(uint offset) -> string`
 
 ## Methods
 
 ### `new SparkRsr(address writer)`
-### `.addProviderRetrievalResultStatsCommitment(address string)`
+### `.addProviderRetrievalResultStats(address string)`
 
 May only be called by `writer`.
 
