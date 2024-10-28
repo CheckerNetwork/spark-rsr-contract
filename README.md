@@ -40,6 +40,14 @@ forge test
 
 ## Deployment
 
+Calibration:
+
 ```console
 forge create --rpc-url https://api.calibration.node.glif.io/rpc/v0 --mnemonic secrets/mnemonic src/SparkRsr.sol:SparkRsr
+```
+
+Mainnet:
+
+```console
+forge create --rpc-url https://api.node.glif.io/rpc/v0 src/SparkRsr.sol:SparkRsr --constructor-args "0x..."
 ```
