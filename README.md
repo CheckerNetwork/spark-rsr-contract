@@ -1,6 +1,7 @@
 # spark-rsr-contract
 
-`0xbDb674b5E24b84D78576fE6263739bc2F90A186E` (on calibration)
+- Mainnet: `0x620bfc5AdE7eeEE90034B05DC9Bb5b540336ff90`
+- Calibration: `0x006fD9D10FCd2CFc830670e1c665ac23b478C252`
 
 [Abi](out/src/SparkRsr.sol/SparkRsr.json)
 
@@ -43,11 +44,11 @@ forge test
 Calibration:
 
 ```console
-forge create --rpc-url https://api.calibration.node.glif.io/rpc/v0 --mnemonic secrets/mnemonic src/SparkRsr.sol:SparkRsr
+forge create --rpc-url https://api.calibration.node.glif.io/rpc/v0 --mnemonic secrets/mnemonic src/SparkRsr.sol:SparkRsr --constructor-args "0x..."
 ```
 
 Mainnet:
 
 ```console
-forge create --rpc-url https://api.node.glif.io/rpc/v0 src/SparkRsr.sol:SparkRsr --constructor-args "0x..."
+forge create --rpc-url https://api.node.glif.io/rpc/v0 src/SparkRsr.sol:SparkRsr --ledger --constructor-args "0x..."
 ```
