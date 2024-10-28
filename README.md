@@ -3,7 +3,7 @@
 - Mainnet: `0x620bfc5AdE7eeEE90034B05DC9Bb5b540336ff90`
 - Calibration: `0x006fD9D10FCd2CFc830670e1c665ac23b478C252`
 
-[Abi](out/src/SparkRsr.sol/SparkRsr.json)
+[Abi](out/SparkRsr.sol/SparkRsr.json)
 
 [Interface spec](https://www.notion.so/protocollabs/Design-Spark-SLI-on-chain-interface-121837df73d4801aaaa4f13ff7839cd0?d=126837df73d4803a95c1001caac0aa71#b70f9a9b99dd43739b136393d08c2091)
 
