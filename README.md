@@ -7,6 +7,66 @@
 
 [Interface spec](https://www.notion.so/protocollabs/Design-Spark-SLI-on-chain-interface-121837df73d4801aaaa4f13ff7839cd0?d=126837df73d4803a95c1001caac0aa71#b70f9a9b99dd43739b136393d08c2091)
 
+## Usage
+
+Get all provider retrieval result stats CIDs:
+
+```
+index = 0
+loop:
+  try:
+    cid = contract.providerRetrievalResultStats(index++)
+  catch:
+    if (revert):
+      break
+```
+
+Each CID refers to a DAG-JSON object hosted on Storacha:
+
+```
+https://$CID.ipfs.w3s.link?format=car
+```
+
+You can explore data from your browser using IPLD:
+
+```
+https://explore.ipld.io/#/explore/$CID
+```
+
+Example: https://explore.ipld.io/#/explore/baguqeera27yois66ac3fq3elk6ksdswk2em7lw3252l4osiogn7m5tyxusca
+
+Each provider retrieval result stats object is of this shape:
+
+```js
+{
+  "date": "<YYYY-MM-DD>",
+  "meta": {
+    "rounds": [
+      {
+        "index": "<roundIndex>",
+        "contractAddress": "<contractAddress>",
+        "details": { "/": "<cid>" }
+        "measurementBatches": [{ "/": "<cid>" }, ...],
+        "sparkEvaluateVersion": {
+          "gitCommit": "<hash>",
+        },
+      },
+      ...
+    ]
+  },
+  "providerRetrievalResultStats": [
+    {
+      "providerId": "<providerId>",
+      "successful": <n>,
+      "total": <n>
+    },
+    ...
+  ]
+}
+```
+
+See full documentation at https://github.com/filecoin-project/service-classes/blob/main/service-level-indicators/spark-retrieval-success-rate.md#provider-retrieval-result-stats
+
 ## Getters
 
 ### `.providerRetrievalResultStats(uint offset) -> string`
